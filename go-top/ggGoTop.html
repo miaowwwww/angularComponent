@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>TO top</title>
+	<style type="text/css">
+		.top{display: block;position: fixed;right: 20px;bottom:20px;height: 60px;width: 60px;background-color: blue;}
+	</style>
+	<!-- <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script> -->
+	<script type="text/javascript" src='./AngularJs.js'></script>
+
+
+</head>
+<body ng-controller="myCtrl">
+	<h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1><h1>我是段落</h1>
+	
+
+	<a class="top" gg-go-top=100></a>
+
+	<script type="text/javascript">
+		angular.module('myApp',['ggUi'])
+			.controller('myCtrl',['$scope',function($scope){
+
+			}])
+		// 导入自己的模块
+		var ggUi = angular.module('ggUi', [])
+						//这个驼峰法是必须的
+			ggUi.directive('ggGoTop', ['$window', function($window){
+				// Runs during compile
+				return {
+					restrict:'AE',
+					compile: function(ele,attr){
+						var _top = attr.ggGoTop; //指定高度number
+						ele.bind('click', function(){
+							// _top == undefined || _top == null?(document.body.scrollTop= 0):(document.body.scrollTop = _top);
+							_top && (document.body.scrollTop = _top) || (document.body.scrollTop = 0)
+						})
+						return function($scope,ele,attr){
+
+						}
+					}
+					
+				};
+			}]);
+		</script>
+</body>
+</html>
