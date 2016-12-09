@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+	<title>Document</title>
+	<style type="text/css">
+		*{ margin: 0; padding: 0; }
+		div { margin: 30px; height: 100px; width: 400px; border: 1px solid #000; }
+	</style>
+</head>
+<body ng-controller="indexCtrl">
+	<p>{{text}}</p>
+	<p>{{textValue}}</p>
+	<div contenteditable ng-model="textValue"></div>
+
+	<script type="text/javascript" src='../AngularJs.js'></script>
+	<script src="app.js"></script>
+	<script src="ui.js"></script>
+</body>
+</html>

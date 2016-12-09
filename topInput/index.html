@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+	<title>Document</title>
+	<style type="text/css">
+		* {margin:0; padding:0;}
+		/* ********************* topInput ************************* */
+		#topInput { position: fixed; top: 0; right: 0; bottom: 0; left: 0; display: flex; flex-flow: column nowrap; z-index: 999; }
+		#topInput div { height: 1.2rem; background-color: #fff; display: flex; border-bottom: 1px solid #ccc; }
+		#topInput a { display: block; min-width: 1rem; padding: 0 0.1rem; line-height: 1.2rem; height: 1.2rem; text-align: center; color: #666; font-size: 14px; }
+		#topInput p { flex: 1; display: block; height: 1.2rem; position: relative; }
+		#topInput i { display: block; position: absolute; height: 1.2rem; line-height: 1.2rem; width: 0.8rem; text-align: center; z-index: 1; font-size: 0.5rem; color: #999; }
+		#topInput input { position: absolute; height: 0.8rem; top: 50%; margin-top: -0.4rem; display: block; width: 100%; border-radius: 0.1rem; text-indent: 0.8rem; padding: 0; line-height: 0.8rem; border: 1px solid #eee; }
+		#topInput footer { flex: 1; background-color: rgba(0, 0, 0, .6); }
+	</style>
+</head>
+<body ng-controller="indexCtrl">
+
+	<button ng-click="input()">你的名字</button>
+
+	<script type="text/javascript" src='../AngularJs.js'></script>
+	<script src="app.js"></script>
+	<script src="ui.js"></script>
+</body>
+</html>

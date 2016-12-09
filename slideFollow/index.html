@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+	<title>Document</title>
+	<style type="text/css">
+		* {margin:0; padding:0;}
+		div {height: 60px; width: 400px; margin:40px; margin-top: 200px; border: 1px solid #000; box-sizing: content-box; /*overflow: hidden;*/}
+		li { height: 20px; line-height: 20px; }
+	</style>
+</head>
+<body ng-controller="indexCtrl">
+
+	<div>
+		<ul slide-follow speed="400" delay="1000" model="arr">
+			<li ng-repeat="item in arr">{{item}} -------------------------------</li>
+		</ul>
+	</div>
+	<div>
+		<ul slide-follow speed="400" delay="1000">
+			<li>a -------------------------------</li>
+			<li>b -------------------------------</li>
+			<li>c -------------------------------</li>
+			<li>d -------------------------------</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src='../AngularJs.js'></script>
+	<script src="app.js"></script>
+	<script src="ui.js"></script>
+</body>
+</html>

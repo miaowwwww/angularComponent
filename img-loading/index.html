@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+	<title>Document</title>
+	<style>
+		img{
+			height: 300px;
+			width: 100%;
+		}
+		.img-loading {
+			height: 300px;
+			width: 100%;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+
+	<img-loading class="img-loading" target-src="./images/1.jpg" loading-src="./images/5.jpg" error-src="./images/3.jpg" />
+
+	<img img-loading target-src="./images/1.jpg" loading-src="./images/5.jpg" error-src="./images/3.jpg" />
+	<img img-loading target-src="./images/11.jpg" loading-src="./images/5.jpg" error-src="./images/3.jpg" />
+	<img img-loading target-src="./images/11.jpg" loading-src="./images/5.jpg" />
+	<img img-loading target-src="./images/11.jpg" error-src="./images/3.jpg" />
+	<img img-loading target-src="./images/1.jpg" />
+	
+	<script type="text/javascript" src='../AngularJs.js'></script>
+	<script src="app.js"></script>
+	<script src="ggUI.js"></script>
+</body>
+</html>
